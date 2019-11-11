@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/font-awesome/js/all.js"></script>
+    <script src="assets/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="assets/js/gen.js"></script>
+    <title>Pasar Buah HD</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-success">
+        <a class="navbar-brand" href="#">HD FruitShop <i class="fas fa-leaf"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Etalase <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promo</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Coming soon :)</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a href="#" onclick="Output()"><i class="fas fa-shopping-cart"></i><i id="txtkeranjang"> Keranjang (0)</i></a></Keranjang>
+          </form>
+        </div>
+      </nav><br><br><br>
+    
+    <div class="col-12">
+        <h3 class="text-info text-center">Pilih buah sesuai seleramu :)</h3>
+        <div class="container">
+            <div class="card-deck">
+                <div class="card border-warning" id="menu">
+                    <img src="assets/img/jeruk.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Jeruk Manis</h5>
+                        <p class="card-text">Manis banget layaknya ngeliat mantan yang lagi kesambet :D</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="card-footer text-right">
+                            <input type="text" id="hrgjeruk" value="36000" hidden>
+                            <input type="text" id="qjeruk" value="1" hidden>
+                        <button class="btn btn-info" onclick="tes('hrgjeruk','qjeruk')">Beli</button>
+                    </div>
+                </div>
+                <div class="card border-danger" id="menu">
+                    <img src="assets/img/apel.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Apel</h5>
+                        <p class="card-text">Rasa impor ala domestik, manis dan juicy lah :) bikin
+                            ketagihan, kayak ngeliat mantan ditunggu ajalnya :v 
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="card-footer text-right">
+                        <input type="text" id="hrgapel" value="36000" hidden>
+                        <input type="text" id="qapel" value="1" hidden>
+                        <button class="btn btn-info" onclick="tes('hrgapel','qapel')">Beli</button>
+                    </div>
+                </div>
+                <div class="card border-primary" id="menu">
+                    <img src="assets/img/anggur.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Anggur</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="card-footer text-right">
+                            <input type="text" id="hrganggur" value="36000" hidden>
+                            <input type="text" id="qanggur" value="1" hidden>
+                        <button class="btn btn-info" onclick="tes('hrganggur','qanggur')">Beli</button>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="card-deck">
+                <div class="card border-danger" id="menu">
+                    <img src="assets/img/jambu.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Jambu</h5>
+                        <p class="card-text">
+                           jambu manis se-manis hari-harimu yang bikin kamu ketagihan
+                            saat memakannya :)
+                        </p>
+                        
+                    </div>
+                    <div class="card-footer text-right">
+                            <input type="text" id="hrgjambu" value="36000" hidden>
+                            <input type="text" id="qjambu" value="1" hidden>
+                        <button class="btn btn-info" onclick="tes('hrgjambu','qjambu')">Beli</button>
+                    </div>
+                </div>
+                <div class="card border-success" id="menu">
+                    <img src="assets/img/mangga.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mangga</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="card-footer text-right">
+                            <input type="text" id="hrgmangga" value="36000" hidden>
+                            <input type="text" id="qmangga" value="1" hidden>
+                        <button class="btn btn-info" onclick="tes('hrgmangga','qmangga')">Beli</button>
+                    </div>
+                </div>
+                <div class="card border-warning" id="menu">
+                    <img src="assets/img/melon.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Melon</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="card-footer text-right">
+                            <input type="text" id="hrgmelon" value="36000" hidden>
+                            <input type="text" id="qmelon" value="1" hidden>
+                        <button class="btn btn-info" onclick="tes('hrgmelon','qmelon')">Beli</button>
+                    </div>
+                </div>
+            </div><br><br><br>
+        </div>
+    </div>
+</body>
+
+</html>
